@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VELVET & PULSE | Luxury Sexual Wellness & Body-Safe Intimate Pleasure</title>
+  <meta name="description" content="Discover premium adult pleasure devices, contactless sonic air-pulse vibrators, and organic body serums. 100% body-safe silicone, whisper-quiet motors, and guaranteed discreet shipping & billing.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              bg: '#0c0b10',
+              surface: '#14121b',
+              accent: '#e07a8a',
+              accentDark: '#c85a6e',
+              gold: '#dfb275'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-[#0c0b10] text-stone-100 min-h-screen relative selection:bg-rose-500/30 selection:text-white">
+
+  <!-- Ambient Glow Blobs -->
+  <div class="ambient-blob w-[500px] h-[500px] bg-rose-900/10 top-0 left-[-100px]"></div>
+  <div class="ambient-blob w-[600px] h-[600px] bg-amber-900/10 top-[600px] right-[-150px]"></div>
+  <div class="ambient-blob w-[500px] h-[500px] bg-purple-900/10 bottom-[800px] left-[-50px]"></div>
+
+  <!-- Top Announcement & Discreet Escape Bar -->
+  <div class="bg-stone-950/90 border-b border-stone-800/60 text-xs py-2 px-4 sticky top-0 z-40 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3 text-stone-400">
+      <div class="flex items-center gap-2">
+        <span class="inline-block w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span class="font-medium text-stone-300">100% Discreet Packaging Guaranteed</span>
+        <span class="hidden sm:inline text-stone-600">•</span>
+        <span class="hidden sm:inline">Plain brown box with zero logos</span>
+        <span class="hidden md:inline text-stone-600">•</span>
+        <span class="hidden md:inline text-amber-200/90">Free discreet express shipping over $69</span>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <span class="hidden lg:inline text-stone-500 text-[11px]">Card statement: <strong class="text-stone-300">VP COMMERCE</strong></span>
+        <!-- Quick Exit Privacy Button -->
+        <button type="button" class="quick-exit-btn inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-stone-900 hover:bg-stone-800 text-rose-300 border border-stone-700/80 text-[11px] font-medium transition-all shadow-sm group" title="Press ESC twice or click to quickly leave to a neutral screen">
+          <svg class="w-3.5 h-3.5 text-rose-400 group-hover:rotate-12 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
+          <span>Quick Exit (ESC)</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="glass-nav sticky top-[37px] z-30 transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      <!-- Mobile menu trigger -->
+      <button type="button" id="mobile-menu-btn" class="md:hidden p-2 text-stone-400 hover:text-stone-200">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+
+      <!-- Brand Logo -->
+      <a href="#" class="flex flex-col items-start group">
+        <div class="flex items-center gap-2">
+          <span class="font-serif text-2xl sm:text-3xl tracking-[0.2em] font-light text-stone-100 group-hover:text-rose-300 transition-colors">
+            VELVET & PULSE
+          </span>
+          <span class="w-1.5 h-1.5 rounded-full bg-rose-400 shadow-sm shadow-rose-400"></span>
+        </div>
+        <span class="text-[9px] uppercase tracking-[0.25em] text-stone-400 font-medium">Intimate Wellness</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 text-xs uppercase tracking-widest font-medium text-stone-300">
+        <a href="#catalog-section" class="hover:text-rose-400 transition-colors">Collections</a>
+        <a href="#simulator-section" class="hover:text-rose-400 transition-colors flex items-center gap-1.5">
+          <span>Pulse Simulator</span>
+          <span class="text-[9px] px-1.5 py-0.2 rounded-full bg-rose-500/20 text-rose-300 border border-rose-500/40">Live</span>
+        </a>
+        <button type="button" class="open-quiz-trigger hover:text-rose-400 transition-colors">
+          Pleasure Quiz
+        </button>
+        <a href="#discreet-promise-section" class="hover:text-rose-400 transition-colors">Discreet Guarantee</a>
+        <a href="#guides-section" class="hover:text-rose-400 transition-colors">Wellness Guides</a>
+      </nav>
+
+      <!-- Right Action Icons -->
+      <div class="flex items-center gap-3">
+        <!-- Wishlist Button -->
+        <button type="button" id="nav-wishlist-btn" class="p-2.5 rounded-full text-stone-300 hover:text-rose-400 hover:bg-stone-900 border border-transparent hover:border-stone-800 transition-all relative" title="View Wishlist">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+          <span class="wishlist-badge hidden absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-stone-700 text-stone-200 text-[10px] font-bold flex items-center justify-center">0</span>
+        </button>
+
+        <!-- Shopping Cart Trigger -->
+        <button type="button" class="open-cart-trigger flex items-center gap-2.5 py-2 px-4 rounded-full bg-stone-900 hover:bg-stone-800 border border-stone-800 text-stone-200 hover:text-white transition-all shadow-lg shadow-stone-950/60 relative group">
+          <svg class="w-4 h-4 text-rose-400 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          <span class="text-xs font-medium uppercase tracking-wider">Bag</span>
+          <span class="cart-badge hidden w-5 h-5 rounded-full bg-rose-500 text-white text-[11px] font-bold flex items-center justify-center">0</span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu-drawer" class="hidden md:hidden bg-stone-950/95 border-t border-stone-800/80 px-6 py-4 space-y-3 text-xs uppercase tracking-widest text-stone-300">
+      <a href="#catalog-section" class="block py-2 hover:text-rose-400 mobile-nav-link">Collections</a>
+      <a href="#simulator-section" class="block py-2 hover:text-rose-400 mobile-nav-link">Pulse Simulator</a>
+      <button type="button" class="open-quiz-trigger block py-2 text-left hover:text-rose-400 mobile-nav-link w-full">Pleasure Quiz</button>
+      <a href="#discreet-promise-section" class="block py-2 hover:text-rose-400 mobile-nav-link">Discreet Guarantee</a>
+      <a href="#guides-section" class="block py-2 hover:text-rose-400 mobile-nav-link">Wellness Guides</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden border-b border-stone-800/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Hero Text (7 cols) -->
+        <div class="lg:col-span-7 space-y-8">
+          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-stone-900/80 border border-stone-800 backdrop-blur-md">
+            <span class="w-2 h-2 rounded-full bg-rose-400"></span>
+            <span class="text-xs uppercase tracking-widest text-stone-300 font-medium">Modern Sexual Wellness & Intimacy</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-light text-stone-100 leading-[1.08] tracking-tight">
+            Intimacy, Reimagined with <span class="italic text-rose-300">Tactile Reverence.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-stone-400 font-light max-w-xl leading-relaxed">
+            Engineered with biocompatible liquid silicone, contactless sonic air-pulse resonance, and whisper-quiet motors. Sensual pleasure designed for every anatomy—delivered with zero external markings.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="#catalog-section" class="py-3.5 px-8 rounded-full bg-gradient-to-r from-rose-500 to-rose-600 hover:from-rose-600 hover:to-rose-700 text-white font-medium text-xs uppercase tracking-widest transition-all duration-300 shadow-xl shadow-rose-950/50 flex items-center gap-2 group">
+              <span>Explore Collection</span>
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+
+            <button type="button" class="open-quiz-trigger py-3.5 px-7 rounded-full bg-stone-900/90 hover:bg-stone-800 text-stone-200 border border-stone-800 hover:border-stone-700 text-xs font-medium uppercase tracking-widest transition-all flex items-center gap-2">
+              <svg class="w-4 h-4 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+              <span>Take Intimacy Quiz</span>
+            </button>
+          </div>
+
+          <!-- Trust Pillars -->
+          <div class="pt-8 border-t border-stone-800/80 grid grid-cols-2 sm:grid-cols-4 gap-4 text-stone-400 text-xs">
+            <div class="space-y-1">
+              <div class="font-medium text-stone-200 flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                Discreet Box
+              </div>
+              <div class="text-[11px] text-stone-500">No logos or labels</div>
+            </div>
+
+            <div class="space-y-1">
+              <div class="font-medium text-stone-200 flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-rose-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                Body-Safe
+              </div>
+              <div class="text-[11px] text-stone-500">Medical-grade silicone</div>
+            </div>
+
+            <div class="space-y-1">
+              <div class="font-medium text-stone-200 flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                IPX7 Waterproof
+              </div>
+              <div class="text-[11px] text-stone-500">Bath & shower safe</div>
+            </div>
+
+            <div class="space-y-1">
+              <div class="font-medium text-stone-200 flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                Whisper Silent
+              </div>
+              <div class="text-[11px] text-stone-500">Under 35 dB sound</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Spotlight Card (5 cols) -->
+        <div class="lg:col-span-5">
+          <div class="relative group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-rose-500/20 to-amber-500/20 rounded-3xl blur-xl group-hover:blur-2xl transition duration-700"></div>
+            
+            <div class="relative rounded-3xl bg-stone-900 border border-stone-800 overflow-hidden shadow-2xl p-6">
+              <div class="aspect-square rounded-2xl overflow-hidden bg-stone-950 mb-5 relative">
+                <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80" alt="The Aurora Air-Wave" class="w-full h-full object-cover">
+                <div class="absolute top-3 left-3 px-3 py-1 rounded-full text-[10px] font-medium uppercase tracking-wider bg-rose-500 text-white shadow-lg">
+                  Featured Innovation
+                </div>
+                <div class="absolute bottom-3 right-3 px-3 py-1.5 rounded-full bg-stone-950/80 backdrop-blur-md border border-stone-800 text-[10px] text-stone-300">
+                  Contactless Sonic Pulses
+                </div>
+              </div>
+
+              <div class="flex justify-between items-baseline mb-2">
+                <div>
+                  <span class="text-xs uppercase tracking-wider text-rose-400 font-medium">Bestseller</span>
+                  <h3 class="font-serif text-2xl text-stone-100 font-normal">The Aurora Air-Wave</h3>
+                </div>
+                <div class="text-right">
+                  <span class="text-2xl font-serif text-amber-200">$98.00</span>
+                  <div class="text-[10px] text-stone-500 line-through">$125.00</div>
+                </div>
+              </div>
+
+              <p class="text-xs text-stone-400 leading-relaxed mb-4">
+                Aerodynamic soundwaves that resonate with sensitive clitoral nerve clusters without direct friction or desensitization.
+              </p>
+
+              <div class="flex gap-2">
+                <button type="button" class="flex-1 py-3 px-4 rounded-xl bg-rose-500 hover:bg-rose-600 text-white text-xs font-medium transition-colors" onclick="window.dispatchEvent(new CustomEvent('velvet:view-product', { detail: { productId: 'aurora-air-wave' } }))">
+                  View Full Anatomy Specs
+                </button>
+                <button type="button" id="hero-spotlight-add-btn" class="py-3 px-4 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-200 text-xs font-medium transition-colors flex items-center gap-1.5" onclick="if(window.VelvetStore){window.dispatchEvent(new CustomEvent('velvet:add-cart', { detail: { product: window.VelvetStore.PRODUCTS[0], quantity: 1 } }));}">
+                  + Add
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Pleasure Quiz Callout Strip -->
+  <section class="py-8 bg-gradient-to-r from-rose-950/30 via-stone-900/60 to-purple-950/30 border-b border-stone-800/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-2xl bg-rose-500/10 border border-rose-500/30 flex items-center justify-center text-rose-400 shrink-0">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        </div>
+        <div>
+          <h4 class="font-serif text-xl text-stone-100 font-normal">Unsure Which Device Fits Your Sensation Profile?</h4>
+          <p class="text-xs text-stone-400">Take our confidential 60-second questionnaire. Get matched with your ideal decibel, motor, and anatomy fit.</p>
+        </div>
+      </div>
+
+      <button type="button" class="open-quiz-trigger whitespace-nowrap py-3 px-6 rounded-full bg-stone-100 hover:bg-white text-stone-950 text-xs font-semibold uppercase tracking-widest transition-all shadow-lg hover:shadow-stone-100/10 shrink-0">
+        Start Confidential Quiz →
+      </button>
+    </div>
+  </section>
+
+  <!-- Product Catalog Section -->
+  <section id="catalog-section" class="py-16 md:py-24 border-b border-stone-800/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div>
+          <span class="text-xs uppercase tracking-widest text-rose-400 font-medium">Curated Collections</span>
+          <h2 class="font-serif text-3xl sm:text-5xl text-stone-100 font-light mt-1">
+            Sculpted for Intimate Euphoria
+          </h2>
+          <p id="catalog-count" class="text-xs text-stone-400 mt-2">Showing all 12 intimate wellness products</p>
+        </div>
+
+        <!-- Search and Sort Bar -->
+        <div class="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto">
+          <!-- Live Search Input -->
+          <div class="relative w-full sm:w-64">
+            <input type="text" id="search-input" placeholder="Search by sensation, feature..." class="w-full bg-stone-900 border border-stone-800 rounded-full pl-9 pr-4 py-2.5 text-xs text-stone-200 placeholder-stone-500 focus:outline-none focus:border-rose-400 transition-colors">
+            <svg class="w-4 h-4 text-stone-500 absolute left-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+          </div>
+
+          <!-- Sort Select -->
+          <select id="sort-select" class="w-full sm:w-auto bg-stone-900 border border-stone-800 rounded-full px-4 py-2.5 text-xs text-stone-300 focus:outline-none focus:border-rose-400">
+            <option value="featured">Featured Curations</option>
+            <option value="rating">Highest Rated</option>
+            <option value="reviews">Most Reviewed</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Categories Pills Scroll -->
+      <div id="categories-container" class="flex gap-2.5 overflow-x-auto pb-4 mb-10 no-scrollbar">
+        <!-- Rendered by app.js -->
+      </div>
+
+      <!-- Products Grid -->
+      <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Pulse & Resonance Simulator Section -->
+  <section id="simulator-section" class="py-16 md:py-24 bg-stone-950/80 border-b border-stone-800/40 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs uppercase tracking-widest font-medium mb-3">
+          Interactive Lab
+        </div>
+        <h2 class="font-serif text-3xl sm:text-5xl text-stone-100 font-light">
+          Experience the Frequency
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-400 mt-2">
+          Hear and visualize our acoustic dampening engineering. Preview whisper-quiet decibels and customizable wave patterns before purchasing.
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto bg-stone-900/80 border border-stone-800 rounded-3xl p-6 sm:p-8 shadow-2xl backdrop-blur-md">
+        <!-- Canvas Wave Visualizer -->
+        <div class="rounded-2xl overflow-hidden border border-stone-800 mb-6 bg-stone-950 relative">
+          <canvas id="simulator-canvas" class="w-full h-[140px] block"></canvas>
+          <div id="simulator-status" class="absolute bottom-2 left-4 text-[10px] font-mono text-stone-400">
+            System Ready • Ready for tactile test
+          </div>
+        </div>
+
+        <!-- Controls Row -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 items-center mb-6">
+          <!-- Pattern Selector -->
+          <div>
+            <label class="block text-xs font-medium text-stone-300 mb-2">Pulsation Wave Pattern</label>
+            <div class="grid grid-cols-2 gap-2">
+              <button type="button" data-pattern-btn="wave" class="py-2 px-3 rounded-xl border border-rose-400 bg-rose-500/20 text-rose-300 text-xs font-medium text-left transition-colors">
+                Ocean Wave
+              </button>
+              <button type="button" data-pattern-btn="pulse" class="py-2 px-3 rounded-xl border border-stone-800 bg-stone-900 text-stone-400 hover:text-stone-200 text-xs font-medium text-left transition-colors">
+                Rhythmic Pulse
+              </button>
+              <button type="button" data-pattern-btn="rumble" class="py-2 px-3 rounded-xl border border-stone-800 bg-stone-900 text-stone-400 hover:text-stone-200 text-xs font-medium text-left transition-colors">
+                Deep Resonance
+              </button>
+              <button type="button" data-pattern-btn="crescendo" class="py-2 px-3 rounded-xl border border-stone-800 bg-stone-900 text-stone-400 hover:text-stone-200 text-xs font-medium text-left transition-colors">
+                Crescendo
+              </button>
+            </div>
+          </div>
+
+          <!-- Intensity Slider & Decibels -->
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between items-center text-xs mb-1.5">
+                <span class="text-stone-300 font-medium">Motor Resonance Intensity</span>
+                <span id="simulator-db" class="font-mono text-amber-200 font-medium">32 dB</span>
+              </div>
+              <input type="range" id="simulator-intensity-slider" min="10" max="100" value="60" class="w-full">
+            </div>
+
+            <!-- Decibel quiet meter -->
+            <div class="p-3 rounded-xl bg-stone-950/70 border border-stone-800/80">
+              <div class="flex justify-between text-[11px] text-stone-400 mb-1.5">
+                <span>Sound Level: <strong>Whisper Quiet</strong></span>
+                <span class="text-emerald-400">Under Bedroom Ambient</span>
+              </div>
+              <div class="w-full bg-stone-800 h-1.5 rounded-full overflow-hidden">
+                <div id="simulator-db-bar" class="bg-gradient-to-r from-emerald-400 via-amber-300 to-rose-400 h-full transition-all duration-150" style="width: 48%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-3 pt-4 border-t border-stone-800">
+          <button type="button" id="simulator-toggle-btn" class="flex-1 py-3 px-6 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-100 text-xs font-medium uppercase tracking-wider transition-all flex items-center justify-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Test Sensation Pulse
+          </button>
+
+          <button type="button" id="simulator-sound-btn" class="py-3 px-5 rounded-xl bg-stone-900 border border-stone-800 hover:border-stone-700 text-stone-400 text-xs font-medium transition-colors flex items-center justify-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"/></svg>
+            Sound: Muted
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Discreet Packaging & Privacy Guarantee Section -->
+  <section id="discreet-promise-section" class="py-16 md:py-24 border-b border-stone-800/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Visual Unboxing Illustration (5 cols) -->
+        <div class="lg:col-span-5">
+          <div class="p-8 rounded-3xl bg-stone-900/60 border border-stone-800 relative space-y-6">
+            <div class="w-full aspect-[4/3] rounded-2xl bg-[#523A28]/20 border border-[#8C6239]/40 flex flex-col items-center justify-center p-6 text-center relative overflow-hidden">
+              <!-- Plain Box Graphic Representation -->
+              <div class="w-32 h-24 border-2 border-dashed border-[#B8860B]/60 rounded-lg flex flex-col items-center justify-center bg-[#2B1D12]/40 mb-3 shadow-inner">
+                <span class="text-[9px] uppercase tracking-widest text-amber-200/80 font-mono">FRAGILE / DISCREET</span>
+                <span class="text-[8px] text-stone-400 mt-1">Sender: VP Logistics</span>
+              </div>
+              <div class="text-xs font-serif text-stone-200">100% Plain Recycled Kraft Carton</div>
+              <div class="text-[11px] text-stone-400 mt-1">Zero logos, zero product names, zero hints.</div>
+            </div>
+
+            <!-- Card Statement Preview Mockup -->
+            <div class="p-4 rounded-xl bg-stone-950 border border-stone-800 space-y-2">
+              <div class="text-[11px] text-stone-400 flex justify-between">
+                <span>Credit Card Statement Preview</span>
+                <span class="text-emerald-400">Verified Confidential</span>
+              </div>
+              <div class="p-2.5 rounded-lg bg-stone-900 font-mono text-xs text-amber-200 flex justify-between items-center">
+                <span>VP COMMERCE 800-555-0199</span>
+                <span class="text-stone-300 font-sans">$98.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text Details (7 cols) -->
+        <div class="lg:col-span-7 space-y-6">
+          <span class="text-xs uppercase tracking-widest text-emerald-400 font-medium">Privacy Covenant</span>
+          <h2 class="font-serif text-3xl sm:text-5xl text-stone-100 font-light leading-tight">
+            Your Pleasure is Intimate. <br><span class="italic text-rose-300">Your Privacy is Sacred.</span>
+          </h2>
+
+          <p class="text-stone-300 text-sm leading-relaxed font-light">
+            We understand that intimacy requires absolute discretion. Whether you live with roommates, family, or in an apartment building with communal mailrooms, our shipping and billing protocols protect your personal life unconditionally.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 border border-emerald-500/30">
+                ✓
+              </div>
+              <div>
+                <h4 class="font-medium text-stone-200 text-sm">Completely Neutral Outer Packaging</h4>
+                <p class="text-xs text-stone-400 mt-0.5">Plain kraft cardboard box sealed with tamper-evident tape. No imagery, no product descriptions, and no mention of adult toys.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 border border-emerald-500/30">
+                ✓
+              </div>
+              <div>
+                <h4 class="font-medium text-stone-200 text-sm">Discreet Return Address</h4>
+                <p class="text-xs text-stone-400 mt-0.5">The shipping label identifies the sender merely as "VP Logistics LLC".</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-8 h-8 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5 border border-emerald-500/30">
+                ✓
+              </div>
+              <div>
+                <h4 class="font-medium text-stone-200 text-sm">Stealth Billing Entry</h4>
+                <p class="text-xs text-stone-400 mt-0.5">Charges appear simply as "VP COMMERCE - 800-555-0199" on banking applications and statements.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Educational & Clinical Guides Section -->
+  <section id="guides-section" class="py-16 md:py-24 border-b border-stone-800/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs uppercase tracking-widest text-rose-400 font-medium">Empowerment & Education</span>
+        <h2 class="font-serif text-3xl sm:text-5xl text-stone-100 font-light mt-1">
+          The Intimacy Journal
+        </h2>
+        <p class="text-xs sm:text-sm text-stone-400 mt-2">
+          Evidence-based sexual wellness guides written in collaboration with clinical educators and gynecologists.
+        </p>
+      </div>
+
+      <div id="articles-container" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Verified Customer Reviews Section -->
+  <section class="py-16 md:py-24 border-b border-stone-800/40 bg-stone-950/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs uppercase tracking-widest text-amber-300 font-medium">Customer Praise</span>
+        <h2 class="font-serif text-3xl sm:text-5xl text-stone-100 font-light mt-1">
+          Loved in Private by Thousands
+        </h2>
+        <p class="text-xs text-stone-400 mt-2">Over 15,000+ verified 5-star reviews from satisfied explorers worldwide.</p>
+      </div>
+
+      <div id="testimonials-container" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 md:py-24 border-b border-stone-800/40">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <span class="text-xs uppercase tracking-widest text-rose-400 font-medium">Common Inquiries</span>
+        <h2 class="font-serif text-3xl sm:text-4xl text-stone-100 font-light mt-1">
+          Frequently Asked Questions
+        </h2>
+      </div>
+
+      <div id="faq-container" class="space-y-3">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter / Velvet Circle Section -->
+  <section class="py-16 bg-gradient-to-b from-stone-900 to-stone-950 border-b border-stone-800/60">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+      <span class="w-12 h-12 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-300 inline-flex items-center justify-center mx-auto text-lg">
+        ✦
+      </span>
+      <h3 class="font-serif text-3xl sm:text-4xl text-stone-100 font-light">Join the Velvet Circle</h3>
+      <p class="text-xs sm:text-sm text-stone-400 max-w-lg mx-auto leading-relaxed">
+        Receive an instant <strong>15% OFF coupon</strong> (<code>PLEASURE15</code>) for your first discreet order, plus our complimentary digital guide to full-body intimate exploration.
+      </p>
+
+      <form id="newsletter-form" class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto pt-2">
+        <input type="email" required placeholder="Enter private email address..." class="flex-1 bg-stone-950 border border-stone-800 rounded-full px-5 py-3 text-xs text-stone-200 placeholder-stone-500 focus:outline-none focus:border-rose-400">
+        <button type="submit" class="py-3 px-6 rounded-full bg-rose-500 hover:bg-rose-600 text-white text-xs font-semibold uppercase tracking-wider transition-colors shrink-0">
+          Claim 15% Off
+        </button>
+      </form>
+      <div class="text-[11px] text-stone-500">Unsubscribe anytime. We never share or sell subscriber records.</div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-stone-950 py-16 text-xs text-stone-400">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-stone-800/60">
+      <!-- Col 1: Brand -->
+      <div class="space-y-4">
+        <div class="flex items-center gap-2">
+          <span class="font-serif text-2xl tracking-[0.2em] font-light text-stone-100">VELVET & PULSE</span>
+          <span class="w-1.5 h-1.5 rounded-full bg-rose-400"></span>
+        </div>
+        <p class="text-stone-400 text-xs leading-relaxed">
+          Pioneering modern sexual wellness through medical-grade liquid silicone, whisper-quiet motor engineering, and uncompromising confidentiality.
+        </p>
+        <div class="text-[11px] text-stone-500">
+          Statement Identifier: <span class="text-stone-300 font-mono">VP COMMERCE</span>
+        </div>
+      </div>
+
+      <!-- Col 2: Collections -->
+      <div class="space-y-3">
+        <h5 class="text-xs uppercase tracking-widest text-stone-200 font-medium">Collections</h5>
+        <ul class="space-y-2 text-stone-400">
+          <li><a href="#catalog-section" class="hover:text-rose-400 transition-colors">Air-Pulse Clitoral Stimulators</a></li>
+          <li><a href="#catalog-section" class="hover:text-rose-400 transition-colors">Internal & G-Spot Massagers</a></li>
+          <li><a href="#catalog-section" class="hover:text-rose-400 transition-colors">Full-Body Rumbling Wands</a></li>
+          <li><a href="#catalog-section" class="hover:text-rose-400 transition-colors">Couples Rings & Prostate Tech</a></li>
+          <li><a href="#catalog-section" class="hover:text-rose-400 transition-colors">Organic Serums & Hygiene Cleansers</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Discreet Care -->
+      <div class="space-y-3">
+        <h5 class="text-xs uppercase tracking-widest text-stone-200 font-medium">Client Support</h5>
+        <ul class="space-y-2 text-stone-400">
+          <li><a href="#discreet-promise-section" class="hover:text-rose-400 transition-colors">Discreet Delivery Promise</a></li>
+          <li><a href="#guides-section" class="hover:text-rose-400 transition-colors">Device Sanitizing & Care</a></li>
+          <li><a href="#faq-container" class="hover:text-rose-400 transition-colors">2-Year Replacement Warranty</a></li>
+          <li><a href="mailto:care@velvetandpulse.com" class="hover:text-rose-400 transition-colors">Confidential Support Email</a></li>
+          <li><span class="text-stone-500">Toll Free: 1-800-555-0199</span></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Safety & Compliance -->
+      <div class="space-y-3">
+        <h5 class="text-xs uppercase tracking-widest text-stone-200 font-medium">Compliance & Standards</h5>
+        <p class="text-stone-400 text-[11px] leading-relaxed">
+          Intended strictly for consenting adults aged 18 and older. All products comply with CE, RoHS, and FDA biocompatible silicone standards. Phthalate, latex, and BPA free.
+        </p>
+        <div class="flex items-center gap-2 pt-2">
+          <span class="px-2 py-1 rounded bg-stone-900 border border-stone-800 text-[10px] text-stone-300 font-medium">18+ Only</span>
+          <span class="px-2 py-1 rounded bg-stone-900 border border-stone-800 text-[10px] text-stone-300 font-medium">IPX7 Submersible</span>
+          <span class="px-2 py-1 rounded bg-stone-900 border border-stone-800 text-[10px] text-stone-300 font-medium">256-Bit SSL</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-stone-500">
+      <div>© 2026 VELVET & PULSE INTIMATES. All Rights Reserved.</div>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-stone-300">Privacy Policy</a>
+        <a href="#" class="hover:text-stone-300">Terms of Service</a>
+        <a href="#" class="hover:text-stone-300">Discreet Shipping FAQ</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODALS & DRAWERS ==================== -->
+
+  <!-- 1. Age Verification Gate Modal (18+) -->
+  <div id="age-gate-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-xl hidden">
+    <div class="bg-stone-900 border border-stone-800 rounded-3xl p-6 sm:p-10 max-w-lg w-full text-center shadow-2xl relative">
+      <div class="w-16 h-16 rounded-full bg-rose-500/10 border border-rose-500/30 text-rose-400 flex items-center justify-center mx-auto mb-5 text-xl font-bold">
+        18+
+      </div>
+
+      <span class="text-xs uppercase tracking-widest text-stone-400 font-medium">Age Verification Required</span>
+      <h3 class="font-serif text-3xl text-stone-100 font-light mt-1 mb-3">Welcome to Velvet & Pulse</h3>
+
+      <p class="text-xs sm:text-sm text-stone-300 leading-relaxed mb-6 font-light">
+        This website features adult sexual self-pleasure devices, anatomical intimacy products, and sexual wellness guides. By entering, you confirm you are at least 18 years of age (or the legal age of majority in your jurisdiction) and consent to viewing adult wellness products.
+      </p>
+
+      <div class="flex items-center justify-center gap-2 mb-6 text-xs text-stone-400">
+        <input type="checkbox" id="age-remember-checkbox" class="rounded border-stone-700 bg-stone-800 text-rose-500 focus:ring-0" checked>
+        <label for="age-remember-checkbox">Remember my verification on this browser</label>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-3">
+        <button type="button" id="age-confirm-btn" class="flex-1 py-3.5 px-6 rounded-full bg-rose-500 hover:bg-rose-600 text-white font-medium text-xs uppercase tracking-widest transition-colors shadow-lg shadow-rose-950/40">
+          I am 18 or Older — Enter
+        </button>
+        <button type="button" id="age-exit-btn" class="py-3.5 px-6 rounded-full bg-stone-800 hover:bg-stone-700 text-stone-300 text-xs font-medium uppercase tracking-widest transition-colors">
+          Exit Website
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Shopping Cart Slide-over Drawer -->
+  <div id="cart-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm z-50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  <div id="cart-drawer" class="fixed top-0 right-0 bottom-0 w-full max-w-md bg-stone-950 border-l border-stone-800 z-50 transform translate-x-full transition-transform duration-300 flex flex-col shadow-2xl">
+    <!-- Drawer Header -->
+    <div class="p-5 border-b border-stone-800 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <h4 class="font-serif text-xl text-stone-100">Discreet Bag</h4>
+        <span class="cart-badge hidden px-2 py-0.5 rounded-full bg-rose-500/20 text-rose-300 text-[11px] font-medium border border-rose-500/30">0</span>
+      </div>
+      <button type="button" id="cart-close-btn" class="p-1.5 rounded-lg text-stone-400 hover:text-stone-200 hover:bg-stone-900 transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+
+    <!-- Free Shipping Bar -->
+    <div id="cart-free-shipping" class="px-5 py-3 bg-stone-900/60 border-b border-stone-800/80">
+      <!-- Injected by cart.js -->
+    </div>
+
+    <!-- Items Scroll Area -->
+    <div id="cart-items-container" class="flex-1 overflow-y-auto p-5 space-y-4">
+      <!-- Injected by cart.js -->
+    </div>
+
+    <!-- Drawer Footer -->
+    <div id="cart-footer-container" class="p-5 bg-stone-950 border-t border-stone-800">
+      <!-- Injected by cart.js -->
+    </div>
+  </div>
+
+  <!-- 3. Product Detail Modal -->
+  <div id="product-detail-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/80 backdrop-blur-md hidden overflow-y-auto">
+    <div class="bg-stone-950 border border-stone-800 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative my-auto">
+      <button type="button" id="product-modal-close" class="absolute top-4 right-4 z-20 w-9 h-9 rounded-full bg-stone-900/80 hover:bg-stone-800 text-stone-300 hover:text-white flex items-center justify-center border border-stone-700/60 transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div id="product-modal-content">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Pleasure Finder Quiz Modal -->
+  <div id="quiz-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md hidden">
+    <div class="bg-stone-950 border border-stone-800 rounded-3xl max-w-xl w-full shadow-2xl relative overflow-hidden">
+      <button type="button" id="quiz-modal-close" class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-stone-900 hover:bg-stone-800 text-stone-400 hover:text-stone-200 flex items-center justify-center border border-stone-800 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div id="quiz-content-container">
+        <!-- Rendered by quiz.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Discreet Checkout Modal -->
+  <div id="checkout-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md hidden overflow-y-auto">
+    <div class="bg-stone-950 border border-stone-800 rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative my-auto">
+      <button type="button" id="checkout-modal-close" class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-stone-900 hover:bg-stone-800 text-stone-400 hover:text-stone-200 flex items-center justify-center border border-stone-800 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div id="checkout-modal-content">
+        <!-- Rendered by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Generic Article Modal -->
+  <div id="generic-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/85 backdrop-blur-md hidden overflow-y-auto">
+    <div class="bg-stone-950 border border-stone-800 rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative my-auto">
+      <button type="button" id="generic-modal-close" class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-stone-900 hover:bg-stone-800 text-stone-400 hover:text-stone-200 flex items-center justify-center border border-stone-800 transition-colors">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+      <div id="generic-modal-content">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Universal Self-Contained Bundle (Runs smoothly under both file:// and http://) -->
+  <script src="js/app.bundle.js"></script>
+
+</body>
+</html>
+
